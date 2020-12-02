@@ -17,7 +17,7 @@ class CreateTransactionService {
 
   public execute({title, value, type} : TransactionDTO ): Transaction {
 
-    if(type === 'outcome' && value > this.transactionsRepository.getBalance().income) {
+    if(type === 'outcome' && value > this.transactionsRepository.getBalance().total) {
         throw Error('Outcome value invalid');
     }
 

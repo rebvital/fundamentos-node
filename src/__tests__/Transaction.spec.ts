@@ -68,7 +68,7 @@ describe('Transaction', () => {
     const response = await request(app).post('/transactions').send({
       title: 'Bicycle',
       type: 'outcome',
-      value: 5000,
+      value: 3000,
     });
 
     expect(response.status).toBe(400);
